@@ -10,7 +10,7 @@ const playerSchema = new Schema(
             type: String,
             trim: true,
         },
-        Gender: {
+        gender: {
             type: String,
             trim: true,
         },

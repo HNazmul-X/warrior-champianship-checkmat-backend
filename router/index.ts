@@ -1,5 +1,6 @@
 import { Router, Request, Response, NextFunction, Express } from "express";
 import { RouteController } from "../types/routeController";
+import playerRouter from "./playerRouter";
 
 const defaultRouter = Router();
 
@@ -16,6 +17,10 @@ const routes: Route[] = [
     {
         path: "/",
         handler: defaultRouter,
+    },
+    {
+        path: "/api/player",
+        handler: playerRouter,
     },
 ];
 
