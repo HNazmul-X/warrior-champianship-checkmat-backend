@@ -5,41 +5,63 @@ const playerSchema = new Schema(
         package: {
             type: String,
             trim: true,
+            required: true,
         },
         beltColor: {
             type: String,
             trim: true,
+            required: true,
         },
         gender: {
             type: String,
             trim: true,
+            required: true,
         },
-        birthDate: Date,
+        birthDate: {
+            type: Date,
+            required: true,
+        },
         firstName: {
             type: String,
             trim: true,
+            required: true,
         },
         lastName: {
             type: String,
             trim: true,
+            required: true,
         },
         email: {
             type: String,
             trim: true,
+            required: true,
         },
-        age: Number,
+        age: {
+            type: Number,
+            required: true,
+        },
         phone: {
             type: String,
             trim: true,
+            required: true,
         },
-        weight: Number,
+        weight: {
+            type: Number,
+            required: true,
+        },
         jiuJitsuSchoolName: {
             type: String,
             trim: true,
+            required: true,
         },
         jiuJitsuProfessorName: {
             type: String,
             trim: true,
+            required: true,
+        },
+        paymentId: {
+            type: Schema.Types.ObjectId,
+            ref: "paypal-payments",
         },
     },
     {
